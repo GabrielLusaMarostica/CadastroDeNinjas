@@ -2,15 +2,24 @@ package dev.java10x.CadastroDeNinjas.Ninjas;
 
 import dev.java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 // Entity transforma uma classe em uma entidade do banco de dados
 // JPA = Java Persistence API
 @Entity
+//cria o nome da tabela para o banco de dados
 @Table(name = "tb_cadastro")
+// Criacao dos contrutores com Lombok
+@NoArgsConstructor
+@AllArgsConstructor
+//Criacao dos getters e setters com Lombok
+@Data
 public class NinjaModel {
-
+    // Notacoes para criacao automatica do Id para o banco de dados
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -23,36 +32,6 @@ public class NinjaModel {
     @JoinColumn(name = "missoes_id") // foreing key ou chave estrangeira
     private MissoesModel missoes;
 
-    public NinjaModel() {
-    }
+    private String corDoOlho;
 
-    public NinjaModel(String nome, String email, int idade) {
-        this.nome = nome;
-        this.email = email;
-        this.idade = idade;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
-    }
 }
