@@ -3,7 +3,7 @@ package dev.java10x.CadastroDeNinjas;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-//marca a classe principal
+//diz que esta é a classe principal
 @SpringBootApplication
 public class CadastroDeNinjasApplication {
 
