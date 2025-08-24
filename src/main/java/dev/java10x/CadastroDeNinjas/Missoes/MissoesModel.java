@@ -24,6 +24,7 @@ public class MissoesModel {
     private Long id;
     private String nome;
     private String dificuldade;
+    private String rank;
 
     // Uma missao pode ter varios ninjas
     @OneToMany(mappedBy = "missoes") // quando utilziado o onetomany, usamos o mappedby com o nome do atributo da outra classe

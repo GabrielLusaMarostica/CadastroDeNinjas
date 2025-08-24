@@ -22,11 +22,19 @@ public class NinjaModel {
     // Notacoes para criacao automatica do Id para o banco de dados
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column (name = "id")
     private Long id;
+
+    @Column(name = "nome")
     private String nome;
 
     @Column(unique = true) // diz que essa coluna vai ser unica, pois só um ninja pode ter um email, o email nao pode ser repitido
     private String email;
+
+    @Column(name = "img_url")
+    private String imgUrl;
+
+    @Column(name = "idade")
     private int idade;
 
     // @ManyToOne, um ninja tem uma unica missao
