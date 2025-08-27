@@ -19,9 +19,16 @@ public class MissoesController {
         return missoesService.listarMissoes();
     }
 
+    //mostra algo pro usuario
+    @GetMapping("/listar/{id}")
+    public MissoesModel listarMissoes(@PathVariable Long id){
+        return missoesService.listarMissoesPorId(id);
+    }
+
     // usada quando o usuario deve mandar algo para nós
     @PostMapping("/criar")
     public String criarMissao(){
+
         return "Missao criada com sucesso";
     }
 
