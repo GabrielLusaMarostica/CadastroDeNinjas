@@ -23,6 +23,10 @@ public class MissoesService {
         return missoesPorId.orElse(null);
     }
 
+    public MissoesModel criarMissao(MissoesModel missoesModel){
+        return missoesRepository.save(missoesModel);
+    }
+
     public void deletarMissaoPorId(Long id){
         missoesRepository.deleteById(id);
     }
