@@ -27,8 +27,8 @@ public class MissoesController {
 
     // usada quando o usuario deve mandar algo para nós
     @PostMapping("/criar")
-    public MissoesModel criarMissao(@RequestBody MissoesModel missoesModel) {
-        return missoesService.criarMissao(missoesModel);
+    public MissoesDTO criarMissao(@RequestBody MissoesDTO missoesDTO) {
+        return missoesService.criarMissao(missoesDTO);
     }
 
     //mandar uma requisicao para alterar as missoes

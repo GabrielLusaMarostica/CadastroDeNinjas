@@ -30,9 +30,9 @@ public class NinjaService {
 
     // criar um novo ninja
     public NinjaDTO criarNinja(NinjaDTO ninjaDTO){
-        NinjaModel ninja = ninjaMapper.map(ninjaDTO);
-        ninja = ninjaRepository.save(ninja);
-        return ninjaMapper.map(ninja);
+        NinjaModel ninja = ninjaMapper.map(ninjaDTO); // cria uma instancia do ninjamodel, e atribui os atributos do ninjaDTO, atraves do mapper
+        ninja = ninjaRepository.save(ninja); // usa o metodo save para salvar o ninja no banco de dados
+        return ninjaMapper.map(ninja); // retorna o nosso ninja para o usuario
     }
 
     // Deletar o ninja - tem que ser um metodo void, pois nao retornará nada, apenas deletará

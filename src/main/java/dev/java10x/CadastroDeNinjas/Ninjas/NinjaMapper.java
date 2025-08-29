@@ -5,6 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class NinjaMapper {
 
+    //cria um mapeamento de um ninjaModel para o ninjaDTO, para que o ninjaModel seja igual ao DTO
     public NinjaModel map(NinjaDTO ninjaDTO){
         NinjaModel ninjaModel = new NinjaModel();
         ninjaModel.setId(ninjaDTO.getId());
@@ -19,6 +20,7 @@ public class NinjaMapper {
         return ninjaModel;
     }
 
+    //cria um mapeamento do ninjDTO para o ninjaMOdel , para que o DTO seja igual o model
     public NinjaDTO map(NinjaModel ninjaModel){
         NinjaDTO ninjaDTO = new NinjaDTO();
         ninjaDTO.setId(ninjaModel.getId());
