@@ -15,13 +15,13 @@ public class MissoesController {
 
     //mostra algo pro usuario
     @GetMapping("/listar")
-    public List<MissoesModel> listarMissoes(){
+    public List<MissoesDTO> listarMissoes(){
         return missoesService.listarMissoes();
     }
 
     //mostra algo pro usuario
     @GetMapping("/listar/{id}")
-    public MissoesModel listarMissoes(@PathVariable Long id){
+    public MissoesDTO listarMissoes(@PathVariable Long id){
         return missoesService.listarMissoesPorId(id);
     }
 
@@ -33,8 +33,8 @@ public class MissoesController {
 
     //mandar uma requisicao para alterar as missoes
     @PutMapping("/alterar/{id}")
-    public MissoesModel alterarMissao(@PathVariable Long id, @RequestBody MissoesModel missoesModel){
-        return missoesService.atualizarMissao(id, missoesModel);
+    public MissoesDTO alterarMissao(@PathVariable Long id, @RequestBody MissoesDTO missoesDTO){
+        return missoesService.atualizarMissao(id, missoesDTO);
     }
 
     //usada para deletar as missoes
