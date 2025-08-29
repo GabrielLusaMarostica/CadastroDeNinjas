@@ -34,6 +34,9 @@ public class NinjaModel {
     @Column(name = "img_url")
     private String imgUrl;
 
+    @Column(name = "local")
+    private String local;
+
     @Column(name = "idade")
     private int idade;
 
